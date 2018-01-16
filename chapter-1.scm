@@ -84,4 +84,32 @@
 '(() () () ())
 ;; Yes, because it is a collection of S-expressions enclosed by parentheses.
 
+;; What is the car of l where l is the arguement (a b c)?
+(car '(a b c)) 
+;; 'a', because 'a' is the first atom of this list.
 
+;; What is the car of l where l is ((a b c) x y z)?
+(car '((a b c) x y z))  
+;; (a b c), because (a b c) is the first S-expression of this non-empty list.
+
+;; What is the car of l where l is 'hotdog?
+(car 'hotdog) 
+;; No answer. You cannot ask for the car of an atom.
+
+;; What is the car of '()?
+(car '()) 
+;; No answer. You cannot ask for the car of an empty list.
+
+;; THE LAW OF THE CAR
+;; The primative car is defined only for non-empty lists.
+
+;; What is the car of (((hotdogs)) (and) (pickle) relish)?
+(car '(((hotdogs)) (and) (pickle) relish)) 
+;; ((hotdogs)), read as: "The list of the list of hotdogs." ((hotdogs)) is the
+;; first S-expression.
+
+;; What is (car l) where l is (((hotdogs)) (and) (pickle) relish)?
+;; ((hotdogs)), because (car l) is another way to ask for "the car of the list l."
+
+;; What is (car (car l)), where l is (((hotdogs)) (and))?
+;; (hotdogs).
