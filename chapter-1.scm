@@ -58,3 +58,30 @@
 ;; Is it true that this is a list?
 '(how are you doing so far)
 ;; Yes, because it is a collection of S-expressions enclosed by parentheses.
+
+;; How many S-expressions are in the list below, and what are they? 
+'(how are you doing so far)
+;; Six: 'how', 'are', 'you', 'doing', 'so', and 'far'.
+
+;; Is it true that this is a list?
+'(((how) are) ((you) (doing so)) far)
+;; Yes, because it is a collection of S-expressions enclosed by parentheses.
+
+;; How many S-expressions are in the list below, and what are they?
+'(((how) are) ((you) (doing so)) far)
+;; Three, '((how) are)', '((you) (doing so))', and 'far.
+
+;; Is it true that this is a list?
+'()
+;;Yes, because it contains zero S-expressions enclosed by parentheses. This
+;; special S-expression is called the null (or empty) list.
+
+;; Is it true that this is an atom?
+'()
+;; No, () is is just a list.
+
+;; Is it true that this is a list?
+'(() () () ())
+;; Yes, because it is a collection of S-expressions enclosed by parentheses.
+
+
